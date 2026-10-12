@@ -41,4 +41,7 @@ async function show() {
   count.textContent = `${herbs.length} herbs grow here.`
 }
 
-show()
+show().catch((error) => {
+  count.textContent = "Could not load the herbs. Please try reloading the page."
+  console.error(error)
+})
