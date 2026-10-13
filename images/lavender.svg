@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">Lavender herb illustration</title>
+  <desc id="desc">A stylised lavender plant with purple flowers and green leaves.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f3ea"/>
+      <stop offset="100%" stop-color="#edf5e4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="440" fill="url(#bg)"/>
+  <ellipse cx="330" cy="360" rx="210" ry="36" fill="#d7c9af" opacity="0.7"/>
+
+  <g fill="#5a8f5a" stroke="#446d40" stroke-width="3">
+    <path d="M310 120 C292 174, 294 248, 306 325 C324 250, 326 174, 310 120 Z"/>
+    <path d="M350 110 C332 168, 336 232, 346 305 C363 230, 364 170, 350 110 Z"/>
+    <path d="M270 152 C248 192, 248 250, 264 312 C282 252, 284 198, 270 152 Z"/>
+    <path d="M386 150 C409 192, 407 244, 394 310 C374 246, 372 190, 386 150 Z"/>
+  </g>
+
+  <g fill="#b4d777" stroke="#6c8f53" stroke-width="2">
+    <ellipse cx="310" cy="120" rx="12" ry="24" transform="rotate(-18 310 120)"/>
+    <ellipse cx="350" cy="110" rx="12" ry="24" transform="rotate(18 350 110)"/>
+    <ellipse cx="270" cy="152" rx="11" ry="20" transform="rotate(-12 270 152)"/>
+    <ellipse cx="386" cy="150" rx="11" ry="20" transform="rotate(12 386 150)"/>
+  </g>
+
+  <g>
+    <g fill="#7b5ab4" stroke="#5a3f8e" stroke-width="2">
+      <ellipse cx="286" cy="92" rx="20" ry="12"/>
+      <ellipse cx="316" cy="76" rx="20" ry="12"/>
+      <ellipse cx="350" cy="88" rx="20" ry="12"/>
+      <ellipse cx="268" cy="126" rx="18" ry="11"/>
+      <ellipse cx="366" cy="126" rx="18" ry="11"/>
+    </g>
+    <g fill="#f0ebff" stroke="#c6b9ee" stroke-width="1.5">
+      <circle cx="287" cy="92" r="4"/>
+      <circle cx="318" cy="76" r="4"/>
+      <circle cx="350" cy="88" r="4"/>
+      <circle cx="270" cy="126" r="3.5"/>
+      <circle cx="367" cy="126" r="3.5"/>
+    </g>
+  </g>
+</svg>

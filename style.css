@@ -105,6 +105,16 @@ section {
   margin: 0;
 }
 
+.card a {
+  color: var(--leaf);
+  text-decoration: none;
+}
+
+.card a:hover,
+.card a:focus-visible {
+  text-decoration: underline;
+}
+
 .latin {
   margin: 0 0 0.5rem;
   font-style: italic;
@@ -118,6 +128,115 @@ section {
   border-radius: 1rem;
   background: var(--leaf-light);
   font-size: 0.875rem;
+}
+
+.detail-page {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--leaf);
+}
+
+.detail-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.detail-summary {
+  margin: 0 0 1.5rem;
+  color: var(--soil);
+}
+
+.herb-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.detail-figure {
+  margin: 0;
+  padding: 0;
+}
+
+.detail-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.detail-card {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.detail-meta {
+  margin: 0 0 1rem;
+}
+
+.detail-meta div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-meta div:last-child {
+  border-bottom: none;
+}
+
+.detail-meta dt {
+  font-weight: 700;
+  color: var(--soil);
+}
+
+.detail-meta dd {
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: var(--leaf);
+  color: white;
+  text-decoration: none;
+}
+
+.detail-copy {
+  margin-top: 2rem;
+}
+
+.detail-copy h2 {
+  margin-top: 0;
+}
+
+.detail-copy ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--soil);
+}
+
+@media (max-width: 40rem) {
+  .herb-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-meta div {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {

@@ -20,8 +20,23 @@ function element(tag, className, text) {
 
 function card(herb) {
   const item = element("li", "card", "")
+  const title = element("h3", "name", herb.name)
+
+  if (herb.name === "Lavender") {
+    const link = document.createElement("a")
+    link.href = "lavender.html"
+    link.setAttribute("aria-label", "Open the lavender herb page")
+    link.appendChild(title)
+    item.append(
+      link,
+      element("p", "latin", herb.latin),
+      element("p", "use", herb.use),
+      element("p", "life", herb.life))
+    return item
+  }
+
   item.append(
-    element("h3", "name", herb.name),
+    title,
     element("p", "latin", herb.latin),
     element("p", "use", herb.use),
     element("p", "life", herb.life))
