@@ -1,0 +1,10 @@
+{
+  "facts": [
+    { "label": "Common name", "value": "English lavender" },
+    { "label": "Botanical name", "value": "Lavandula angustifolia" },
+    { "label": "Life cycle", "value": "Perennial shrub" },
+    { "label": "Flower colour", "value": "Purple" },
+    { "label": "Light", "value": "Full sun" },
+    { "label": "Soil", "value": "Well-drained" }
+  ]
+}

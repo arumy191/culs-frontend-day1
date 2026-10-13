@@ -25,6 +25,13 @@ function card(herb) {
     element("p", "latin", herb.latin),
     element("p", "use", herb.use),
     element("p", "life", herb.life))
+  if (herb.name === "Lavender") {
+    const link = element("a", "herb-link", "Learn about lavender")
+    link.href = "lavender.html"
+    const links = element("div", "card-links", "")
+    links.append(link)
+    item.append(links)
+  }
   return item
 }
 
