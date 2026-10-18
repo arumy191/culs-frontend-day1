@@ -1,21 +1,21 @@
 // Load the fact cards from JSON without inserting HTML from the data.
-const name = document.querySelector("#lavender-name")
-const latin = document.querySelector("#lavender-latin")
-const description = document.querySelector("#lavender-description")
-const image = document.querySelector("#lavender-img")
-const imgdescr = document.querySelector("#lavender-imgdescr")
+const name = document.querySelector("#dherb-name")
+const latin = document.querySelector("#dherb-latin")
+const description = document.querySelector("#dherb-description")
+const image = document.querySelector("#dherb-img")
+const imgdescr = document.querySelector("#dherb-imgdescr")
 
 const factsheading = document.querySelector("#facts-heading")
-const facts = document.querySelector("#lavender-facts")
+const facts = document.querySelector("#dherb-facts")
 const status = document.querySelector("#facts-status")
 
 const growingheading=document.querySelector('#growing-heading')
-const growing=document.querySelector('#lavender-growing')
+const growing=document.querySelector('#dherb-growing')
 const enjoymentheading=document.querySelector('#uses-heading')
-const enjoyment=document.querySelector('#lavender-enjoyment')
+const enjoyment=document.querySelector('#dherb-enjoyment')
 
-const video = document.querySelector("#lavender-video")
-const link = document.querySelector("#lavender-link")
+const video = document.querySelector("#dherb-video")
+const link = document.querySelector("#dherb-link")
 
 async function showLavenderFacts() {
   const response = await fetch("data/lavender.json")
