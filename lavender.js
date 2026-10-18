@@ -5,11 +5,13 @@ const description = document.querySelector("#lavender-description")
 const image = document.querySelector("#lavender-img")
 const imgdescr = document.querySelector("#lavender-imgdescr")
 
-
+const factsheading = document.querySelector("#facts-heading")
 const facts = document.querySelector("#lavender-facts")
 const status = document.querySelector("#facts-status")
 
+const growingheading=document.querySelector('#growing-heading')
 const growing=document.querySelector('#lavender-growing')
+const enjoymentheading=document.querySelector('#uses-heading')
 const enjoyment=document.querySelector('#lavender-enjoyment')
 
 const video = document.querySelector("#lavender-video")
@@ -35,8 +37,9 @@ async function showLavenderFacts() {
     return card
   })
   facts.replaceChildren(...cards)
-  status.textContent = "Lavender facts loaded."
+  status.textContent = `${data.name} facts loaded.`
   status.classList.add("visually-hidden")
+  factsheading.textContent=`${data.name} at a glance`;
 
   name.textContent=data.name;
   latin.textContent=data.latin;
@@ -45,12 +48,14 @@ async function showLavenderFacts() {
   image.src=data.img.src;
   imgdescr.textContent=data.img.caption;
 
+  growingheading.textContent=`Growing ${data.name}`;
   data.grow.forEach(item => {
     const li = document.createElement("li");
     li.textContent = item;
     growing.appendChild(li);
   });
 
+  enjoymentheading.textContent=`Enjoying ${data.name}`;
   data.engoy.forEach(item => {
     const li = document.createElement("li");
     li.textContent = item;
