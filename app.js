@@ -4,11 +4,11 @@ const detail = document.querySelector("#herb-detail");
 const main = document.querySelector("#herbs-main");
 
 async function loadHerbs() {
-  const response = await fetch("data/herbs.json")
+  const response = await fetch("data/herbs.json");
   if (!response.ok) {
-    throw new Error(`Could not load ${response.url}: ${response.status} ${response.statusText}`)
+    throw new Error(`Could not load ${response.url}: ${response.status} ${response.statusText}`);
   }
-  return response.json()
+  return response.json();
 }
 
 async function loadHerb(id) {
@@ -20,38 +20,30 @@ async function loadHerb(id) {
 }
 
 function element(tag, className, text, link) {
-  const node = document.createElement(tag)
-  node.className = className
-  node.textContent = text
-  node.href=link
-  return node
+  const node = document.createElement(tag);
+  node.className = className;
+  node.textContent = text;
+  node.href=link;
+  return node;
 }
 
 function card(herb) {
-  const item = element("li", "card", "")
+  const item = element("li", "card", "");
   item.append(
     element("h3", "name", herb.name),
     element("a", "name", herb.name, `#${herb.id}`),
     element("p", "latin", herb.latin),
     element("p", "use", herb.use),
-    element("p", "life", herb.life))
-    
-  if (herb.name === "Lavender") {
-    const link = element("a", "herb-link", "Learn about lavender")
-    link.href = "lavender.html"
-    const links = element("div", "card-links", "")
-    links.append(link)
-    item.append(links)
-  }
-  return item
+    element("p", "life", herb.life));
+  return item;
 }
 
 async function show() {
-  const list = document.querySelector("#herbs-list")
-  const count = document.querySelector(".count")
-  const herbs = await loadHerbs()
-  list.replaceChildren(...herbs.map(card))
-  count.textContent = `${herbs.length} herbs grow here.`
+  const list = document.querySelector("#herbs-list");
+  const count = document.querySelector(".count");
+  const herbs = await loadHerbs();
+  list.replaceChildren(...herbs.map(card));
+  count.textContent = `${herbs.length} herbs grow here.`;
 }
 
 
@@ -145,23 +137,23 @@ function showHerbDetail(data){
             </section>
           </article>
     `;
-  const name = document.querySelector("#dherb-name")
-  const latin = document.querySelector("#dherb-latin")
-  const description = document.querySelector("#dherb-description")
-  const image = document.querySelector("#dherb-img")
-  const imgdescr = document.querySelector("#dherb-imgdescr")
+  const name = document.querySelector("#dherb-name");
+  const latin = document.querySelector("#dherb-latin");
+  const description = document.querySelector("#dherb-description");
+  const image = document.querySelector("#dherb-img");
+  const imgdescr = document.querySelector("#dherb-imgdescr");
 
-  const factsheading = document.querySelector("#facts-heading")
-  const facts = document.querySelector("#dherb-facts")
-  const status = document.querySelector("#facts-status")
+  const factsheading = document.querySelector("#facts-heading");
+  const facts = document.querySelector("#dherb-facts");
+  const status = document.querySelector("#facts-status");
 
-  const growingheading=document.querySelector('#growing-heading')
-  const growing=document.querySelector('#dherb-growing')
-  const enjoymentheading=document.querySelector('#uses-heading')
-  const enjoyment=document.querySelector('#dherb-enjoyment')
+  const growingheading=document.querySelector('#growing-heading');
+  const growing=document.querySelector('#dherb-growing');
+  const enjoymentheading=document.querySelector('#uses-heading');
+  const enjoyment=document.querySelector('#dherb-enjoyment');
 
-  const video = document.querySelector("#dherb-video")
-  const link = document.querySelector("#dherb-link")
+  const video = document.querySelector("#dherb-video");
+  const link = document.querySelector("#dherb-link");
 
   const cards = data.facts.map((fact) => {
     const card = document.createElement("div")
@@ -172,10 +164,10 @@ function showHerbDetail(data){
     value.textContent = fact.value
     card.append(label, value)
     return card
-  })
-  facts.replaceChildren(...cards)
-  status.textContent = `${data.name} facts loaded.`
-  status.classList.add("visually-hidden")
+  });
+  facts.replaceChildren(...cards);
+  status.textContent = `${data.name} facts loaded.`;
+  status.classList.add("visually-hidden");
   factsheading.textContent=`${data.name} at a glance`;
 
   name.textContent=data.name;
