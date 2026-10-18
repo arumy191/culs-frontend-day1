@@ -1,0 +1,35 @@
+{
+  "name": "Spearmint",
+  "latin": "Lavandula angustifolia",
+  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "img": {
+    "src": "images/lavender.svg",
+    "alt":"An illustration of five purple lavender flower spikes with green stems and narrow leaves",
+    "caption": "Small flowers, plenty of character."
+  },
+  "facts": [
+    { "label": "Common name", "value": "English lavender" },
+    { "label": "Botanical name", "value": "Lavandula angustifolia" },
+    { "label": "Life cycle", "value": "Perennial shrub" },
+    { "label": "Flower colour", "value": "Purple" },
+    { "label": "Light", "value": "Full sun" },
+    { "label": "Soil", "value": "Well-drained" }
+  ],
+  "grow": [
+    "Choose an open, sunny spot.",
+    "Use well-drained soil; avoid ground that stays waterlogged.",
+    "Leave room around the plant for air to circulate.",
+    "Trim after flowering, avoiding cuts into old, leafless wood."
+  ],
+  "engoy": [
+    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
+    "The purple spikes also make a colourful addition to a flower border.",
+    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
+    "Leave some flowers on the plant for visiting bees."
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
+    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
+    "title": "YouTube video on the lavender page"
+  }
+}

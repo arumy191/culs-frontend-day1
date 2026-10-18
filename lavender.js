@@ -15,15 +15,13 @@ const enjoymentheading=document.querySelector('#uses-heading')
 const enjoyment=document.querySelector('#dherb-enjoyment')
 
 const video = document.querySelector("#dherb-video")
-const link = document.querySelector("#dherb-link")
+const link = document.querySelector("#lavender-link")
 
 async function showLavenderFacts() {
   const response = await fetch("data/lavender.json")
   if (!response.ok) {
     throw new Error(`Could not load lavender facts: ${response.status}`)
   }
-
-
 
   const data = await response.json()
   const cards = data.facts.map((fact) => {

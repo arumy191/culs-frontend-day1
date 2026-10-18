@@ -56,7 +56,6 @@ async function show() {
 
 
 function showHerbMain(){
-  console.log('showHerbMain');
   detail.innerHTML = "";
     main.innerHTML=`
     <section class="intro">
@@ -89,7 +88,6 @@ function showHerbMain(){
 }
 
 function showHerbDetail(data){
-  console.log('showHerbDetail');
   main.innerHTML="";
   detail.innerHTML = `
           <article>
@@ -204,6 +202,8 @@ function showHerbDetail(data){
   video.src=data.video.embedurl;
   video.title=data.video.title;
   link.href=data.video.url;
+
+  window.scrollTo(0, 0);
 }
 
 
@@ -223,10 +223,7 @@ async function showHerb() {
     return;
   }
 
-
-  // Load e.g. data/tomato.json
   const herb = await loadHerb(id);
-
   showHerbDetail(herb);
 }
 
