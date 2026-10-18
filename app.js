@@ -11,6 +11,14 @@ async function loadHerbs() {
   return response.json()
 }
 
+async function loadHerb(id) {
+  const response = await fetch(`data/${id}.json`);
+  if (!response.ok) {
+    throw new Error(`Could not load herb: ${id}`);
+  }
+  return response.json();
+}
+
 function element(tag, className, text, link) {
   const node = document.createElement(tag)
   node.className = className
@@ -51,23 +59,8 @@ show().catch((error) => {
   console.error(error)
 })
 
-
-
-
-async function showHerb() {
-
-  const herbs = await loadHerbs()
-
-  console.log("click flower");
-
-  const id = location.hash.slice(1);
-
-  console.log(`ID: ${id}`);
-
-  const herb = herbs.find(herb => herb.id === id);
-
-  if (!herb) {
-    detail.innerHTML = "";
+function showHerbMain(){
+  detail.innerHTML = "";
     main.innerHTML=`
     <section class="intro">
         <div>
@@ -96,20 +89,33 @@ async function showHerb() {
           <a href="https://github.com/zhibka/culs-frontend-day1">Frontend Development, day 1</a>.</p>
       </section>
     `;
-    
-    show();
+}
 
+function showHerbDetail(data){
+  main.innerHTML="";
+  detail.innerHTML = `
+      <h1>${data.name}</h1>
+      <p><strong>Use:</strong> ${data.use}</p>
+      <p><strong>Life:</strong> ${data.life}</p>
+    `;
+}
+
+
+
+async function showHerb() {
+  const id = location.hash.slice(1);
+
+  // No herb selected
+  if (!id || id === "herbs") {
+    showHerbMain();    
+    show();
     return;
   }
-  else{
-    main.innerHTML="";
-  }
 
-  detail.innerHTML = `
-    <h1>${herb.name}</h1>
-    <p><strong>Use:</strong> ${herb.use}</p>
-    <p><strong>Life:</strong> ${herb.life}</p>
-  `;
+  // Load e.g. data/tomato.json
+  const herb = await loadHerb(id);
+
+  showHerbDetail(herb);
 }
 
 window.addEventListener("hashchange", showHerb);
