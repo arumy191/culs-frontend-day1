@@ -54,12 +54,9 @@ async function show() {
   count.textContent = `${herbs.length} herbs grow here.`
 }
 
-show().catch((error) => {
-  count.textContent = "Could not load the herbs. Please try reloading the page."
-  console.error(error)
-})
 
 function showHerbMain(){
+  console.log('showHerbMain');
   detail.innerHTML = "";
     main.innerHTML=`
     <section class="intro">
@@ -92,14 +89,122 @@ function showHerbMain(){
 }
 
 function showHerbDetail(data){
+  console.log('showHerbDetail');
   main.innerHTML="";
   detail.innerHTML = `
-      <h1>${data.name}</h1>
-      <p><strong>Use:</strong> ${data.use}</p>
-      <p><strong>Life:</strong> ${data.life}</p>
-    `;
-}
+          <article>
+            <header class="intro lavender-intro">
+              <div>
+                <p class="eyebrow">Meet the herbs</p>
+                <h1 id="dherb-name"></h1>
+                <p class="latin"><i lang="la" id="dherb-latin"></i></p>
+                <p id="dherb-description"></p>
+                <a href="#growing">Explore how it grows</a>
+              </div>
 
+              <figure class="lavender-figure">
+                <img class="hero" id="dherb-img" width="600" height="400">
+                <figcaption id="dherb-imgdescr"></figcaption>
+              </figure>
+            </header>
+
+
+
+            <section aria-labelledby="facts-heading">
+              <h2 id="facts-heading"></h2>
+              <p id="facts-status" role="status">Loading facts…</p>
+              <dl id="dherb-facts" class="facts-grid"></dl>
+              <noscript><p>Enable JavaScript to see the extra facts. The growing guide below is available without it.</p></noscript>
+            </section>
+
+            <div class="lavender-sections">
+              <section id="growing" class="card" aria-labelledby="growing-heading">
+                <h2 id="growing-heading"></h2>
+                <ul id="dherb-growing"></ul>
+              </section>
+
+              <section class="card" aria-labelledby="uses-heading">
+                <h2 id="uses-heading"></h2>
+                <ul id="dherb-enjoyment"></ul>
+              </section>
+
+            </div>
+
+            <section class="video-section" aria-labelledby="video-heading">
+              <h2 id="video-heading">Watch the video</h2>
+              <div class="video-player">
+                <iframe id="dherb-video" width="480" height="270"
+                  loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+              <p><a id="dherb-link">Watch this video on YouTube</a>.</p>
+            </section>
+
+            <section aria-labelledby="garden-heading">
+              <h2 id="garden-heading">Back to the garden</h2>
+                <a href="index.html#herbs">Explore all herbs</a>.</p>
+            </section>
+          </article>
+    `;
+  const name = document.querySelector("#dherb-name")
+  const latin = document.querySelector("#dherb-latin")
+  const description = document.querySelector("#dherb-description")
+  const image = document.querySelector("#dherb-img")
+  const imgdescr = document.querySelector("#dherb-imgdescr")
+
+  const factsheading = document.querySelector("#facts-heading")
+  const facts = document.querySelector("#dherb-facts")
+  const status = document.querySelector("#facts-status")
+
+  const growingheading=document.querySelector('#growing-heading')
+  const growing=document.querySelector('#dherb-growing')
+  const enjoymentheading=document.querySelector('#uses-heading')
+  const enjoyment=document.querySelector('#dherb-enjoyment')
+
+  const video = document.querySelector("#dherb-video")
+  const link = document.querySelector("#dherb-link")
+
+  const cards = data.facts.map((fact) => {
+    const card = document.createElement("div")
+    card.className = "fact-card"
+    const label = document.createElement("dt")
+    label.textContent = fact.label
+    const value = document.createElement("dd")
+    value.textContent = fact.value
+    card.append(label, value)
+    return card
+  })
+  facts.replaceChildren(...cards)
+  status.textContent = `${data.name} facts loaded.`
+  status.classList.add("visually-hidden")
+  factsheading.textContent=`${data.name} at a glance`;
+
+  name.textContent=data.name;
+  latin.textContent=data.latin;
+  description.textContent=data.description;
+  image.alt=data.img.alt;
+  image.src=data.img.src;
+  imgdescr.textContent=data.img.caption;
+
+  growingheading.textContent=`Growing ${data.name}`;
+  data.grow.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    growing.appendChild(li);
+  });
+
+  enjoymentheading.textContent=`Enjoying ${data.name}`;
+  data.engoy.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    enjoyment.appendChild(li);
+  });
+
+  video.src=data.video.embedurl;
+  video.title=data.video.title;
+  link.href=data.video.url;
+}
 
 
 async function showHerb() {
