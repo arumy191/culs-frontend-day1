@@ -210,12 +210,19 @@ function showHerbDetail(data){
 async function showHerb() {
   const id = location.hash.slice(1);
 
-  // No herb selected
-  if (!id || id === "herbs") {
-    showHerbMain();    
-    show();
+  const mainSections = ["herbs", "visit", "about"];
+
+  if (!id || mainSections.includes(id)) {
+    showHerbMain();
+    await show();
+
+    if (id) {
+      document.querySelector(`#${id}`)?.scrollIntoView();
+    }
+
     return;
   }
+
 
   // Load e.g. data/tomato.json
   const herb = await loadHerb(id);
