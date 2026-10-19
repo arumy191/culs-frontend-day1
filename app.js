@@ -47,14 +47,13 @@ function card(herb) {
   return item;
 }
 
-async function show() {
+async function renderHerbList() {
   const list = document.querySelector("#herbs-list");
   const count = document.querySelector(".count");
   const herbs = await loadHerbs();
   list.replaceChildren(...herbs.map(card));
   count.textContent = `${herbs.length} herbs grow here.`;
 }
-
 
 function showHerbMain(){
   detail.innerHTML = "";
@@ -92,7 +91,7 @@ function showHerbDetail(data){
   main.innerHTML="";
   detail.innerHTML = `
           <article>
-            <header class="intro lavender-intro">
+            <header class="intro herb-intro">
               <div>
                 <p class="eyebrow">Meet the herbs</p>
                 <h1 id="dherb-name"></h1>
@@ -101,7 +100,7 @@ function showHerbDetail(data){
                 <a href="#growing">Explore how it grows</a>
               </div>
 
-              <figure class="lavender-figure">
+              <figure class="herb-figure">
                 <img class="hero" id="dherb-img" width="600" height="400">
                 <figcaption id="dherb-imgdescr"></figcaption>
               </figure>
@@ -116,7 +115,7 @@ function showHerbDetail(data){
               <noscript><p>Enable JavaScript to see the extra facts. The growing guide below is available without it.</p></noscript>
             </section>
 
-            <div class="lavender-sections">
+            <div class="herb-sections">
               <section id="growing" class="card" aria-labelledby="growing-heading">
                 <h2 id="growing-heading"></h2>
                 <ul id="dherb-growing"></ul>
@@ -194,7 +193,7 @@ function showHerbDetail(data){
   });
 
   enjoymentheading.textContent=`Enjoying ${data.name}`;
-  data.engoy.forEach(item => {
+  data.enjoy.forEach(item => {
     const li = document.createElement("li");
     li.textContent = item;
     enjoyment.appendChild(li);
@@ -222,7 +221,7 @@ function showError(title, message) {
 }
 
 
-async function showHerb() {
+async function show() {
   const id = location.hash.slice(1);
 
   const mainSections = ["herbs", "visit", "about"];
@@ -232,7 +231,7 @@ async function showHerb() {
     showHerbMain();
 
     try {
-      await show();
+      await renderHerbList();
     } catch (error) {
       showError(
         "Could not load herbs",
@@ -271,6 +270,6 @@ async function showHerb() {
   }
 }
 
-window.addEventListener("hashchange", showHerb);
+window.addEventListener("hashchange", show);
 
-showHerb();
+show();

@@ -128,7 +128,7 @@ footer {
   color: var(--soil);
 }
 
-/* Lavender detail page and shared keyboard navigation. */
+/* Herb detail page and shared keyboard navigation. */
 nav ul {
   flex-wrap: wrap;
 }
@@ -168,11 +168,11 @@ nav ul {
   border: 0;
 }
 
-.lavender-intro {
+.herb-intro {
   margin-bottom: 2.5rem;
 }
 
-.lavender-intro h1 {
+.herb-intro h1 {
   margin: 0 0 0.5rem;
   font-size: clamp(2.5rem, 7vw, 4rem);
   line-height: 1.1;
@@ -183,12 +183,12 @@ nav ul {
   font-weight: 700;
 }
 
-.lavender-figure {
+.herb-figure {
   min-width: 0;
   margin: 0;
 }
 
-.lavender-figure figcaption {
+.herb-figure figcaption {
   margin-top: 0.5rem;
   color: var(--soil);
 }
@@ -208,12 +208,12 @@ nav ul {
   margin: 0.25rem 0 0;
 }
 
-.lavender-sections {
+.herb-sections {
   display: grid;
   gap: 1.5rem;
 }
 
-.lavender-sections h2 {
+.herb-sections h2 {
   margin-top: 0;
 }
 
@@ -227,7 +227,7 @@ nav ul {
 }
 
 @media (min-width: 40rem) {
-  .lavender-sections {
+  .herb-sections {
     grid-template-columns: 1fr 1fr;
   }
 }
