@@ -87,7 +87,29 @@ function showHerbMain(){
     `;
 }
 
-function showHerbDetail(data){
+function fillList(element, items) {
+  const listItems = items.map(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    return li;
+  });
+  element.replaceChildren(...listItems);
+}
+
+function renderFacts(facts) {
+  return facts.map((fact) => {
+    const card = document.createElement("div");
+    card.className = "fact-card";
+    const label = document.createElement("dt");
+    label.textContent = fact.label;
+    const value = document.createElement("dd");
+    value.textContent = fact.value;
+    card.append(label, value);
+    return card;
+  });
+}
+
+function showHerbDetail(){
   main.innerHTML="";
   detail.innerHTML = `
           <article>
@@ -106,8 +128,6 @@ function showHerbDetail(data){
               </figure>
             </header>
 
-
-
             <section aria-labelledby="facts-heading">
               <h2 id="facts-heading"></h2>
               <p id="facts-status" role="status">Loading facts…</p>
@@ -125,7 +145,6 @@ function showHerbDetail(data){
                 <h2 id="uses-heading"></h2>
                 <ul id="dherb-enjoyment"></ul>
               </section>
-
             </div>
 
             <section class="video-section" aria-labelledby="video-heading">
@@ -145,34 +164,25 @@ function showHerbDetail(data){
             </section>
           </article>
     `;
-  const name = document.querySelector("#dherb-name");
+}
+
+function renderHerb(data){
+const name = document.querySelector("#dherb-name");
   const latin = document.querySelector("#dherb-latin");
   const description = document.querySelector("#dherb-description");
   const image = document.querySelector("#dherb-img");
   const imgdescr = document.querySelector("#dherb-imgdescr");
-
   const factsheading = document.querySelector("#facts-heading");
   const facts = document.querySelector("#dherb-facts");
   const status = document.querySelector("#facts-status");
-
   const growingheading=document.querySelector('#growing-heading');
   const growing=document.querySelector('#dherb-growing');
   const enjoymentheading=document.querySelector('#uses-heading');
   const enjoyment=document.querySelector('#dherb-enjoyment');
-
   const video = document.querySelector("#dherb-video");
   const link = document.querySelector("#dherb-link");
-
-  const cards = data.facts.map((fact) => {
-    const card = document.createElement("div")
-    card.className = "fact-card"
-    const label = document.createElement("dt")
-    label.textContent = fact.label
-    const value = document.createElement("dd")
-    value.textContent = fact.value
-    card.append(label, value)
-    return card
-  });
+  const cards = renderFacts(data.facts);
+  
   facts.replaceChildren(...cards);
   status.textContent = `${data.name} facts loaded.`;
   status.classList.add("visually-hidden");
@@ -186,18 +196,9 @@ function showHerbDetail(data){
   imgdescr.textContent=data.img.caption;
 
   growingheading.textContent=`Growing ${data.name}`;
-  data.grow.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    growing.appendChild(li);
-  });
-
+  fillList(growing, data.grow);
   enjoymentheading.textContent=`Enjoying ${data.name}`;
-  data.enjoy.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    enjoyment.appendChild(li);
-  });
+  fillList(enjoyment, data.enjoy);
 
   video.src=data.video.embedurl;
   video.title=data.video.title;
@@ -251,7 +252,8 @@ async function show() {
 //filled herb detail section
   try {
     const herb = await loadHerb(id);
-    showHerbDetail(herb);
+    showHerbDetail();
+    renderHerb(herb);
 
   } catch (error) {
     console.error(error);
