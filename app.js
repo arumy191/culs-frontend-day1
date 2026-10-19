@@ -23,10 +23,15 @@ async function loadHerb(id) {
   return response.json();
 }
 
-function element(tag, className, text, link) {
+function element(tag, className, text) {
   const node = document.createElement(tag);
   node.className = className;
   node.textContent = text;
+  return node;
+}
+
+function elementLink(className, text, link) {
+  const node = element("a", className, text);
   node.href=link;
   return node;
 }
@@ -35,7 +40,7 @@ function card(herb) {
   const item = element("li", "card", "");
   item.append(
     element("h3", "name", herb.name),
-    element("a", "name", herb.name, `#${herb.id}`),
+    elementLink("name", herb.name, `#${herb.id}`),
     element("p", "latin", herb.latin),
     element("p", "use", herb.use),
     element("p", "life", herb.life));
