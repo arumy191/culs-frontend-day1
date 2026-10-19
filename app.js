@@ -78,7 +78,7 @@ function showHerbMain(){
       <section id="about">
         <h2>About</h2>
         <p>The garden is made up, and so is this site: a practice project for
-          <a href="https://github.com/zhibka/culs-frontend-day1">Frontend Development, day 1</a>.</p>
+          <a href="https://github.com/olgakor-242/culs-frontend-day1">Frontend Development, day 1</a>.</p>
       </section>
     `;
 }
