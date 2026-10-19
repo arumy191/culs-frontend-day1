@@ -38,9 +38,12 @@ function elementLink(className, text, link) {
 
 function card(herb) {
   const item = element("li", "card", "");
+  const heading = element("h3", "name", "");
+  heading.append(
+    elementLink("", herb.name, `#${herb.id}`)
+  );
   item.append(
-    element("h3", "name", herb.name),
-    elementLink("name", herb.name, `#${herb.id}`),
+    heading,
     element("p", "latin", herb.latin),
     element("p", "use", herb.use),
     element("p", "life", herb.life));
@@ -220,7 +223,6 @@ function showError(title, message) {
 
   window.scrollTo(0, 0);
 }
-
 
 async function show() {
   const id = location.hash.slice(1);
