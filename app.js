@@ -14,7 +14,11 @@ async function loadHerbs() {
 async function loadHerb(id) {
   const response = await fetch(`data/${id}.json`);
   if (!response.ok) {
-    throw new Error(`Could not load herb: ${id}`);
+    if (response.status === 404) {
+      throw new Error("HERB_NOT_FOUND");
+    }
+
+    throw new Error("SERVER_ERROR");
   }
   return response.json();
 }
@@ -198,15 +202,40 @@ function showHerbDetail(data){
   window.scrollTo(0, 0);
 }
 
+function showError(title, message) {
+  main.innerHTML = "";
+
+  detail.innerHTML = `
+    <article>
+      <h1>${title}</h1>
+      <p>${message}</p>
+      <p><a href="index.html">Back to the herb garden</a></p>
+    </article>
+  `;
+
+  window.scrollTo(0, 0);
+}
+
 
 async function showHerb() {
   const id = location.hash.slice(1);
 
   const mainSections = ["herbs", "visit", "about"];
 
+//filled Main section
   if (!id || mainSections.includes(id)) {
     showHerbMain();
-    await show();
+
+    try {
+      await show();
+    } catch (error) {
+      showError(
+        "Could not load herbs",
+        "The herb list is currently unavailable."
+      );
+      console.error(error);
+      return;
+    }
 
     if (id) {
       document.querySelector(`#${id}`)?.scrollIntoView();
@@ -215,8 +244,26 @@ async function showHerb() {
     return;
   }
 
-  const herb = await loadHerb(id);
-  showHerbDetail(herb);
+//filled herb detail section
+  try {
+    const herb = await loadHerb(id);
+    showHerbDetail(herb);
+
+  } catch (error) {
+    console.error(error);
+
+    if (error.message === "HERB_NOT_FOUND") {
+      showError(
+        "Herb not found",
+        `Sorry, we don't know the herb "${id}".`
+      );
+    } else {
+      showError(
+        "Could not load herb",
+        "The herb information is currently unavailable. Please try again later."
+      );
+    }
+  }
 }
 
 window.addEventListener("hashchange", showHerb);
