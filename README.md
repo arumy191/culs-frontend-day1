@@ -1,72 +1,72 @@
-# We made Lavander page 
+## Group members/ nickname
 
-Group members 
-Zhibek Aubakirova
-Olha Korotych
-Zhuman Aruzhan
+- Zhibek Aubakirova/ zhibka
+- Olha Korotych/ olgakor-242
+- Zhuman Aruzhan/ arumy191
 
 # The Little Herb Garden
 
-A small website for day 1 of **Frontend Development**.
+The Little Herb Garden is a small, responsive website about herbs for the
+kitchen, tea and pollinators. It was created as a practice project for
+**Frontend Development, day 1**.
 
-It is broken. Your job is to find out why, and to repair it.
+The home page presents eight herbs, with their botanical names, uses and life
+cycles. Select a herb to open its detail view. The Lavender page also includes
+growing tips, uses, extra facts loaded from JSON, and a video.
 
-## What you need
+## Run the project
 
-- a GitHub account
-- Git
-- an editor
-- a browser (Firefox recommended)
-- [Node.js](https://nodejs.org/) (the LTS version), which brings `npx`
+The site uses `fetch()` to load its JSON data, so open it through a local web
+server rather than by double-clicking an HTML file.
 
-## Get your copy
-
-1. **Fork** this repository to your GitHub account.
-2. **Clone your fork**, not this repository:
+1. Install [Node.js](https://nodejs.org/) if it is not already installed.
+2. From the project folder, run:
 
    ```sh
-   git clone https://github.com/<your-name>/culs-frontend-day1.git
-   cd culs-frontend-day1
+   npx serve
    ```
 
-## Run it
+   If prompted to install `serve`, confirm the installation.
+3. Open the local address printed in the terminal, usually
+   <http://localhost:3000>.
+4. Stop the server with `Ctrl+C`.
 
-Start a small web server in the project folder:
-
-```sh
-npx serve
-```
-
-The first time, `npx` asks whether to install `serve`. Answer `y`.
-
-Then open the address it prints, usually <http://localhost:3000>.
-Stop the server with `Ctrl+C`.
-
-Do not open `index.html` by double-clicking it. A `file://` page is not the Web.
-
-## Your mission
-
-Something is wrong. Several things, in fact.
-
-1. Inspect before you change anything: the page, the Console, the Network panel, the Inspector.
-2. Pick one problem and find out why it happens.
-3. Fix it, reload, verify.
-4. Commit that one fix, with a message that says what you fixed.
-5. Repeat.
-
-You are done when:
-
-- the Console shows no unexplained errors
-- the Network panel shows no missing files
-- every link on the page goes where it says
-- `git status` is clean, and `git push` has sent your commits to GitHub
-
-## The project
+## Project structure
 
 ```text
-index.html    the page
-style.css     how it looks
-app.js        what it does
-data/         the herbs, as JSON
-images/       the logo and a picture
+index.html       Herb garden home page
+lavender.html    Lavender information page
+app.js           Home page rendering and herb detail views
+lavender.js      Loads Lavender facts
+style.css        Shared page styles and responsive layout
+data/
+  herbs.json     Herb list used on the home page
+  <herb>.json    Individual herb information and facts
+images/
+  *.svg          Garden, herb and logo illustrations
 ```
+
+The project is built with HTML, CSS and vanilla JavaScript. It has no build
+step or project-specific package installation.
+
+## Herb data format
+
+Each `data/<herb>.json` file contains one JSON object describing a herb. The
+filename (without `.json`) matches that herb's `id` in `data/herbs.json`.
+
+| Property | Format | Description |
+| --- | --- | --- |
+| `name` | string | Common name shown on the detail page. |
+| `latin` | string | Botanical name. |
+| `description` | string | Short introduction to the herb. |
+| `img` | object | `src` (image path), `alt` (accessible image description), and `caption` (figure caption). |
+| `facts` | array of objects | Each item has a `label` and `value` string for the facts section. |
+| `grow` | array of strings | Growing tips displayed as a list. |
+| `enjoy` | array of strings | Ways to use or enjoy the herb, displayed as a list. |
+| `video` | object | `url` (watch page), `embedurl` (player source), and `title` (accessible player title). |
+
+## Accessibility
+
+The pages include keyboard skip links, visible keyboard focus, descriptive
+image text and status messages for dynamically loaded information. The layout
+adapts to smaller screens.

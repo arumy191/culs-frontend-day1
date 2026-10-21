@@ -1,35 +1,35 @@
 {
   "name": "Basil",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "latin": "Ocimum basilicum",
+  "description": "Lush, tender green leaves with a sweet, pungent scent that epitomizes the warmth of summer gardens and kitchens.",
   "img": {
     "src": "images/basil.svg",
     "alt": "An illustration of a bushy basil plant with broad green leaves in a terracotta pot",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English lavender" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
-    { "label": "Life cycle", "value": "Perennial shrub" },
-    { "label": "Flower colour", "value": "Purple" },
+    { "label": "Common name", "value": "Basil" },
+    { "label": "Botanical name", "value": "Ocimum basilicum" },
+    { "label": "Life cycle", "value": "Annual" },
+    { "label": "Flower colour", "value": "White" },
     { "label": "Light", "value": "Full sun" },
-    { "label": "Soil", "value": "Well-drained" }
+    { "label": "Soil", "value": "Rich, moist, well-drained" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Find a warm, sheltered spot receiving ample daily sunshine.",
+    "Keep soil consistently moist, rich, and well-drained.",
+    "Protect young plants from chilly drafts and frost.",
+    "Pinch out growing tips regularly to encourage a bushy shape."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Harvest fresh leaves for tomatoes, pesto and anything summery.",
+    "Enjoy the rich fragrance as you brush past pots on a patio.",
+    "Add fresh torn leaves to salads, pasta dishes, and homemade sauces.",
+    "Pinch off flower buds early to maximize leaf production."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the lavender page"
+    "url": "https://youtu.be/EE_IHIu3UJo?si=IH6hYbGak_7vbR9m",
+    "embedurl": "https://www.youtube.com/embed/EE_IHIu3UJo?si=IH6hYbGak_7vbR9m",
+    "title": "YouTube video on the basil page"
   }
 }

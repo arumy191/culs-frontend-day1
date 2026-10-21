@@ -1,35 +1,35 @@
 {
   "name": "Thyme",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "latin": "Thymus vulgaris",
+  "description": "A low-growing, mat-forming aromatic subshrub with tiny grey-green leaves and clusters of small pale pink or white flowers.",
   "img": {
     "src": "images/thyme.svg",
     "alt": "An illustration of a gently curved thyme sprig with short side branches and small paired green leaves",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English lavender" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
-    { "label": "Life cycle", "value": "Perennial shrub" },
-    { "label": "Flower colour", "value": "Purple" },
+    { "label": "Common name", "value": "Thyme" },
+    { "label": "Botanical name", "value": "Thymus vulgaris" },
+    { "label": "Life cycle", "value": "Perennial" },
+    { "label": "Flower colour", "value": "Pale pink or white" },
     { "label": "Light", "value": "Full sun" },
-    { "label": "Soil", "value": "Well-drained" }
+    { "label": "Soil", "value": "Sandy, well-drained" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Plant in a bright, fully exposed, and sunny location.",
+    "Use light, sandy, or rocky well-drained soil.",
+    "Avoid overwatering or damp conditions during winter.",
+    "Trim lightly after flowering to keep the plant compact."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Incorporate sprigs into soups and stews. Bees love its flowers.",
+    "Create a fragrant ground cover along pathways or garden edges.",
+    "Dry small bunches to use as a pantry staple all year round.",
+    "Watch bees flock to the tiny nectar-rich blossoms."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the lavender page"
+    "url": "https://youtu.be/EmzOfpuzOS8?si=6Uya5Ozu3si1uOXh",
+    "embedurl": "https://www.youtube.com/embed/EmzOfpuzOS8?si=6Uya5Ozu3si1uOXh",
+    "title": "YouTube video on the thyme page"
   }
 }

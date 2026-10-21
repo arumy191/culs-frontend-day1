@@ -1,35 +1,35 @@
 {
   "name": "Spearmint",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "latin": "Mentha spicata",
+  "description": "Vibrant green, crinkled leaves with a refreshing aroma and slender spikes of pink or lilac flowers.",
   "img": {
     "src": "images/spearmint.svg",
     "alt": "An illustration of a full bunch of spearmint with overlapping pointed green leaves and serrated edges",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English lavender" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
-    { "label": "Life cycle", "value": "Perennial shrub" },
-    { "label": "Flower colour", "value": "Purple" },
-    { "label": "Light", "value": "Full sun" },
-    { "label": "Soil", "value": "Well-drained" }
+    { "label": "Common name", "value": "Spearmint" },
+    { "label": "Botanical name", "value": "Mentha spicata" },
+    { "label": "Life cycle", "value": "Perennial" },
+    { "label": "Flower colour", "value": "Pink or lilac" },
+    { "label": "Light", "value": "Full sun to partial shade" },
+    { "label": "Soil", "value": "Moist, fertile" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Select a spot with partial shade or full sun.",
+    "Provide moist, fertile soil and water regularly.",
+    "Contain roots in a pot or barrier since it spreads everywhere.",
+    "Trim back frequently to encourage bushy growth."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Harvest fresh leaves for fresh tea, and it spreads everywhere.",
+    "Muddle leaves into refreshing summer drinks and cool beverages.",
+    "Crush leaves to experience their clean, revitalising scent.",
+    "Allow flowers to open late in the season for pollinators."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the lavender page"
+    "url": "https://youtu.be/5sJXdeIdpd8?si=Z8FsvXLTnzTjysV2",
+    "embedurl": "https://www.youtube.com/embed/5sJXdeIdpd8?si=Z8FsvXLTnzTjysV2",
+    "title": "YouTube video on the spearmint page"
   }
 }

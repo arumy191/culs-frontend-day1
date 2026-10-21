@@ -1,35 +1,35 @@
 {
   "name": "Chamomile",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "latin": "Matricaria chamomilla",
+  "description": "Daisy-like white flowers with bright yellow centers and finely divided feathery leaves, releasing a sweet, apple-like fragrance.",
   "img": {
     "src": "images/chamomile.svg",
     "alt": "An illustration of seven white chamomile flowers with yellow centres on branching green stems with small attached leaves",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English lavender" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
-    { "label": "Life cycle", "value": "Perennial shrub" },
-    { "label": "Flower colour", "value": "Purple" },
-    { "label": "Light", "value": "Full sun" },
-    { "label": "Soil", "value": "Well-drained" }
+    { "label": "Common name", "value": "Chamomile" },
+    { "label": "Botanical name", "value": "Matricaria chamomilla" },
+    { "label": "Life cycle", "value": "Annual" },
+    { "label": "Flower colour", "value": "White and yellow" },
+    { "label": "Light", "value": "Full sun to partial shade" },
+    { "label": "Soil", "value": "Loamy, well-drained" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Choose a sunny or lightly shaded area in the garden.",
+    "Sow seeds thinly in loose, well-drained soil.",
+    "Water gently until established, avoiding heavy waterlogging.",
+    "Allow plants to self-seed naturally for future seasons."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Harvest flower heads to brew a calming cup of tea.",
+    "Appreciate the cheerful, daisy-like appearance in casual garden beds.",
+    "Dry the blossoms on a tray to store for relaxing infusions.",
+    "Let flowers open to invite beneficial hoverflies and bees."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the lavender page"
+    "url": "https://youtu.be/lTiUM0AXge8?si=fTKVHdk7DdtxA5t0",
+    "embedurl": "https://www.youtube.com/embed/lTiUM0AXge8?si=fTKVHdk7DdtxA5t0",
+    "title": "YouTube video on the chamomile page"
   }
 }

@@ -1,35 +1,35 @@
 {
   "name": "Chives",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "latin": "Allium schoenoprasum",
+  "description": "Clump-forming plants featuring slender, hollow grass-like green leaves and striking spherical pom-poms of purple blossoms.",
   "img": {
     "src": "images/chives.svg",
     "alt": "An illustration of Chives with slender green leaves and round purple flower heads",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English lavender" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
-    { "label": "Life cycle", "value": "Perennial shrub" },
+    { "label": "Common name", "value": "Chives" },
+    { "label": "Botanical name", "value": "Allium schoenoprasum" },
+    { "label": "Life cycle", "value": "Perennial" },
     { "label": "Flower colour", "value": "Purple" },
-    { "label": "Light", "value": "Full sun" },
-    { "label": "Soil", "value": "Well-drained" }
+    { "label": "Light", "value": "Full sun to partial shade" },
+    { "label": "Soil", "value": "Rich, moist, well-drained" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Plant in an open, sunny spot or light partial shade.",
+    "Ensure soil is rich, fertile, and holds adequate moisture.",
+    "Divide clumps every few years to keep plants vigorous.",
+    "Snip leaves right down to the base to encourage fresh regrowth."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Chop fresh green blades for bread and butter, eggs, potatoes.",
+    "Garnish salads and savory dishes with edible purple flower florets.",
+    "Grow neat borders along vegetable patches or pathways.",
+    "Provide early season nectar for visiting pollinators."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the lavender page"
+    "url": "https://youtu.be/CDtcm5r8wVc?si=lUElWeqMWXDlfSim",
+    "embedurl": "https://www.youtube.com/embed/CDtcm5r8wVc?si=lUElWeqMWXDlfSim",
+    "title": "YouTube video on the chives page"
   }
 }

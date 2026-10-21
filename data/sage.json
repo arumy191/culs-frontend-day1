@@ -1,35 +1,35 @@
 {
   "name": "Sage",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English lavender brings colour and scent to a sunny garden.",
+  "latin": "Salvia officinalis",
+  "description": "Soft grey-green textured leaves and whorls of purple-blue flowers give sage a distinct ornamental and culinary presence.",
   "img": {
     "src": "images/sage.svg",
     "alt": "An illustration of sage with an upright purple flower spike and four broad green leaves",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English lavender" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
+    { "label": "Common name", "value": "Sage" },
+    { "label": "Botanical name", "value": "Salvia officinalis" },
     { "label": "Life cycle", "value": "Perennial shrub" },
-    { "label": "Flower colour", "value": "Purple" },
+    { "label": "Flower colour", "value": "Purple-blue" },
     { "label": "Light", "value": "Full sun" },
     { "label": "Soil", "value": "Well-drained" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Plant in a sunny position with plenty of light.",
+    "Grow in dry to medium moisture, well-drained soil.",
+    "Space plants properly to prevent moisture buildup on leaves.",
+    "Cut back hard in spring to encourage fresh new foliage."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Admire the velvety, tactile foliage in herb borders.",
+    "Use fresh leaves in butter sauces and tea.",
+    "Dry leaves to keep a supply of earthy seasoning on hand.",
+    "Leave flowers to bloom to attract bees and beneficial insects."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the lavender page"
+    "url": "https://www.youtube.com/watch?v=ya3mtAFqKzI",
+    "embedurl": "https://www.youtube.com/embed/ya3mtAFqKzI?si=zjGslZLghXrLAuP6",
+    "title": "YouTube video on the sage page"
   }
 }

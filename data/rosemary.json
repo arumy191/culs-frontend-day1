@@ -1,35 +1,35 @@
 {
   "name": "Rosemary",
-  "latin": "Lavandula angustifolia",
-  "description": "Silver-green leaves, purple flower spikes and a familiar fragrance: English Rosemary brings colour and scent to a sunny garden.",
+  "latin": "Salvia rosmarinus",
+  "description": "A hardy evergreen shrub with needle-like aromatic leaves and pale blue flowers, adding fragrance and flavour to any garden.",
   "img": {
     "src": "images/rosemary.svg",
     "alt": "An illustration of a curved diagonal rosemary sprig with long narrow green leaves",
     "caption": "Small flowers, plenty of character."
   },
   "facts": [
-    { "label": "Common name", "value": "English Rosemary" },
-    { "label": "Botanical name", "value": "Lavandula angustifolia" },
+    { "label": "Common name", "value": "Rosemary" },
+    { "label": "Botanical name", "value": "Salvia rosmarinus" },
     { "label": "Life cycle", "value": "Perennial shrub" },
-    { "label": "Flower colour", "value": "Purple" },
+    { "label": "Flower colour", "value": "Pale blue" },
     { "label": "Light", "value": "Full sun" },
     { "label": "Soil", "value": "Well-drained" }
   ],
   "grow": [
-    "Choose an open, sunny spot.",
-    "Use well-drained soil; avoid ground that stays waterlogged.",
-    "Leave room around the plant for air to circulate.",
-    "Trim after flowering, avoiding cuts into old, leafless wood."
+    "Choose a warm, open, and sunny spot.",
+    "Use gritty, well-drained soil; they dislike sitting in wet ground.",
+    "Ensure good air circulation around the plant.",
+    "Prune lightly after flowering to maintain shape and prevent woody bases."
   ],
   "enjoy": [
-    "Enjoy the flowers in the garden, or dry small bunches for fragrant sachets.",
-    "The purple spikes also make a colourful addition to a flower border.",
-    "Use the flowers in cooking, for example in desserts or to flavour sugar.",
-    "Leave some flowers on the plant for visiting bees."
+    "Enjoy the aromatic scent in the garden on warm days.",
+    "Use fresh or dried sprigs for potatoes, bread, and roast vegetables.",
+    "Add flowering stems to fresh floral or herbal arrangements.",
+    "Provide a valuable nectar source for early pollinators."
   ],
   "video": {
-    "url": "https://www.youtube.com/watch?v=fj7h5E_E-5w",
-    "embedurl":"https://www.youtube.com/embed/fj7h5E_E-5w?si=q4mPVodPEM-xJLZH",
-    "title": "YouTube video on the Rosemary page"
+    "url": "https://www.youtube.com/watch?v=brbPNLVF9b4",
+    "embedurl": "https://www.youtube.com/embed/brbPNLVF9b4?si=y9w2NmuWXbGx3KJA",
+    "title": "YouTube video on the rosemary page"
   }
 }
