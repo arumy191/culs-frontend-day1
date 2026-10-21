@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <title>Rosemary sprig</title>
+  <desc>A curved diagonal rosemary sprig with pairs of long narrow green leaves.</desc>
+  <defs>
+    <g id="needle">
+      <path d="M0 0 C-7 -18 -8 -48 0 -62 C7 -46 6 -17 0 0Z" fill="#548645" stroke="#426b48" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M0 -5 V-48" fill="none" stroke="#c4d8b5" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#e9f2e5"/>
+  <circle cx="475" cy="85" r="44" fill="#fbfaf5"/>
+  <ellipse cx="300" cy="360" rx="170" ry="16" fill="#548645" opacity=".16"/>
+  <path d="M175 352 C249 324 277 273 321 218 S386 130 405 78" fill="none" stroke="#426b48" stroke-width="5" stroke-linecap="round"/>
+<use href="#needle" transform="translate(215 331) rotate(-8) scale(0.85)"/>
+<use href="#needle" transform="translate(215 331) rotate(76) scale(0.85)"/>
+<use href="#needle" transform="translate(248 305) rotate(-8) scale(1)"/>
+<use href="#needle" transform="translate(248 305) rotate(76) scale(1)"/>
+<use href="#needle" transform="translate(255 295) rotate(17) scale(.72)"/><use href="#needle" transform="translate(255 295) rotate(54) scale(.78)"/>
+<use href="#needle" transform="translate(276 274) rotate(-8) scale(1.05)"/>
+<use href="#needle" transform="translate(276 274) rotate(76) scale(1.05)"/>
+<use href="#needle" transform="translate(301 243) rotate(-8) scale(1.08)"/>
+<use href="#needle" transform="translate(301 243) rotate(76) scale(1.08)"/>
+<use href="#needle" transform="translate(308 233) rotate(17) scale(.72)"/><use href="#needle" transform="translate(308 233) rotate(54) scale(.78)"/>
+<use href="#needle" transform="translate(326 212) rotate(-8) scale(1.05)"/>
+<use href="#needle" transform="translate(326 212) rotate(76) scale(1.05)"/>
+<use href="#needle" transform="translate(350 181) rotate(-8) scale(1)"/>
+<use href="#needle" transform="translate(350 181) rotate(76) scale(1)"/>
+<use href="#needle" transform="translate(357 171) rotate(17) scale(.72)"/><use href="#needle" transform="translate(357 171) rotate(54) scale(.78)"/>
+<use href="#needle" transform="translate(373 148) rotate(-8) scale(0.92)"/>
+<use href="#needle" transform="translate(373 148) rotate(76) scale(0.92)"/>
+<use href="#needle" transform="translate(391 115) rotate(-8) scale(0.82)"/>
+<use href="#needle" transform="translate(391 115) rotate(76) scale(0.82)"/>
+<use href="#needle" transform="translate(398 105) rotate(17) scale(.72)"/><use href="#needle" transform="translate(398 105) rotate(54) scale(.78)"/>
+<use href="#needle" transform="translate(402 87) rotate(-8) scale(0.65)"/>
+<use href="#needle" transform="translate(402 87) rotate(76) scale(0.65)"/>
+  <use href="#needle" transform="translate(405 78) rotate(20) scale(.68)"/>
+</svg>

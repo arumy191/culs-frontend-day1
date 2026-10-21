@@ -1,3 +1,10 @@
+# We made Lavander page 
+
+Group members 
+Zhibek Aubakirova
+Olha Korotych
+Zhuman Aruzhan
+
 # The Little Herb Garden
 
 A small website for day 1 of **Frontend Development**.

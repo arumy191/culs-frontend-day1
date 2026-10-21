@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <title>Thyme sprig</title>
+  <desc>A gently curved thyme sprig with short side branches and small paired green leaves.</desc>
+  <defs>
+    <g id="leaf">
+      <path d="M0 0 C-10 -14 -11 -35 0 -44 C11 -35 10 -14 0 0Z" fill="#548645" stroke="#426b48" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M0 -4 V-32" stroke="#c4d8b5" stroke-width="1.5" fill="none"/>
+    </g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#e9f2e5"/>
+  <circle cx="475" cy="85" r="44" fill="#fbfaf5"/>
+  <ellipse cx="300" cy="360" rx="170" ry="16" fill="#548645" opacity=".16"/>
+  <g fill="none" stroke="#426b48" stroke-width="5" stroke-linecap="round">
+    <path d="M280 352 Q311 266 302 181 Q298 112 285 65"/>
+    <path d="M293 302 Q265 290 252 267 M293 302 Q326 288 343 264 M303 231 Q272 220 254 198 M303 231 Q333 218 351 195 M299 159 Q274 148 259 127 M299 159 Q323 144 337 119 M290 99 Q270 88 258 70"/>
+  </g>
+<use href="#leaf" transform="translate(293 298) rotate(-67) scale(1.12 .9)"/><use href="#leaf" transform="translate(293 298) rotate(54) scale(1 .95)"/>
+<use href="#leaf" transform="translate(252 267) rotate(-26) scale(.72 .85)"/><use href="#leaf" transform="translate(343 264) rotate(24) scale(.72 .9)"/>
+<use href="#leaf" transform="translate(280 290) rotate(-14) scale(.65 .8)"/><use href="#leaf" transform="translate(310 288) rotate(17) scale(.65 .76)"/>
+<use href="#leaf" transform="translate(303 227) rotate(-67) scale(1.12 .9)"/><use href="#leaf" transform="translate(303 227) rotate(54) scale(1 .95)"/>
+<use href="#leaf" transform="translate(254 198) rotate(-26) scale(.72 .85)"/><use href="#leaf" transform="translate(351 195) rotate(24) scale(.72 .9)"/>
+<use href="#leaf" transform="translate(290 219) rotate(-14) scale(.65 .8)"/><use href="#leaf" transform="translate(320 217) rotate(17) scale(.65 .76)"/>
+<use href="#leaf" transform="translate(299 155) rotate(-67) scale(1.12 .9)"/><use href="#leaf" transform="translate(299 155) rotate(54) scale(1 .95)"/>
+<use href="#leaf" transform="translate(259 127) rotate(-26) scale(.72 .85)"/><use href="#leaf" transform="translate(337 124) rotate(24) scale(.72 .9)"/>
+<use href="#leaf" transform="translate(286 147) rotate(-14) scale(.65 .8)"/><use href="#leaf" transform="translate(316 145) rotate(17) scale(.65 .76)"/>
+  <use href="#leaf" transform="translate(290 99) rotate(-60) scale(.8 .85)"/>
+  <use href="#leaf" transform="translate(290 99) rotate(38) scale(.8 .9)"/>
+  <use href="#leaf" transform="translate(285 72) rotate(-22) scale(.7 .85)"/>
+  <use href="#leaf" transform="translate(285 66) rotate(9) scale(.65 .8)"/>
+</svg>

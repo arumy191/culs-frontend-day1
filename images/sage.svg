@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <title>Sage in bloom</title>
+  <desc>A single upright sage stem with paired purple flowers and four broad green leaves.</desc>
+  <defs>
+    <g id="flower-pair">
+      <path d="M0 5 C-12 -12 -23 -12 -25 -3 C-36 -8 -40 4 -30 10 C-20 18 -7 14 0 10Z" fill="#34343f"/>
+      <path d="M-22 3 C-37 8 -40 -2 -34 -7 C-46 -10 -39 -20 -31 -16 C-28 -29 -17 -24 -20 -14 C-8 -20 -5 -8 -16 -5Z" fill="#895bb0"/>
+      <g transform="scale(-1 1)">
+        <path d="M0 5 C-12 -12 -23 -12 -25 -3 C-36 -8 -40 4 -30 10 C-20 18 -7 14 0 10Z" fill="#34343f"/>
+        <path d="M-22 3 C-37 8 -40 -2 -34 -7 C-46 -10 -39 -20 -31 -16 C-28 -29 -17 -24 -20 -14 C-8 -20 -5 -8 -16 -5Z" fill="#895bb0"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#e9f2e5"/>
+  <circle cx="475" cy="85" r="44" fill="#fbfaf5"/>
+  <ellipse cx="300" cy="363" rx="123" ry="12" fill="#8a9c80" opacity=".16"/>
+  <g fill="#80a64f">
+    <path d="M290 301 C246 301 205 245 213 192 C218 158 297 215 290 301Z"/>
+    <path d="M310 301 C354 301 395 245 387 192 C382 158 303 215 310 301Z"/>
+    <path d="M297 337 C253 350 187 309 184 270 C182 244 273 269 297 337Z"/>
+    <path d="M303 337 C347 350 413 309 416 270 C418 244 327 269 303 337Z"/>
+  </g>
+  <g fill="none" stroke="#34343f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 363 V60"/>
+    <path d="M300 337 Q279 273 239 219 M300 337 Q321 273 361 219 M300 337 Q264 318 218 283 M300 337 Q336 318 382 283"/>
+  </g>
+  <path d="M300 72 C280 64 282 45 292 53 C295 33 305 33 307 53 C320 43 321 64 300 72Z" fill="#34343f"/>
+  <use href="#flower-pair" transform="translate(300 91) scale(.70)"/>
+  <use href="#flower-pair" transform="translate(300 126) scale(.82)"/>
+  <use href="#flower-pair" transform="translate(300 163) scale(.94)"/>
+  <use href="#flower-pair" transform="translate(300 201)"/>
+  <use href="#flower-pair" transform="translate(300 239)"/>
+</svg>
