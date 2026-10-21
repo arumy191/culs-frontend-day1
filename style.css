@@ -252,3 +252,21 @@ nav ul {
 .video-section {
   text-align: center;
 }
+
+.image-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  color: var(--soil);
+  background: var(--leaf-light);
+}
+
+.herb-figure .image-fallback,
+.intro > .image-fallback {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+}

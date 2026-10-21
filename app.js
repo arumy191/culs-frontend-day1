@@ -3,6 +3,37 @@
 const detail = document.querySelector("#herb-detail");
 const main = document.querySelector("#herbs-main");
 
+function focusContent(target) {
+  if (!target) return;
+  target.tabIndex = -1;
+  target.focus({ preventScroll: true });
+  target.scrollIntoView();
+}
+
+function showImageFallback(image) {
+  if (!image.isConnected) return;
+  const fallback = element("span", "image-fallback", "Image unavailable");
+  if (image.alt) {
+    fallback.setAttribute("role", "img");
+    fallback.setAttribute("aria-label", `${image.alt}. Image unavailable.`);
+  } else {
+    fallback.setAttribute("aria-hidden", "true");
+  }
+  image.replaceWith(fallback);
+}
+
+// Image errors do not bubble; capture them before a broken image is displayed.
+document.addEventListener("error", (event) => {
+  if (event.target instanceof HTMLImageElement) {
+    showImageFallback(event.target);
+  }
+}, true);
+
+// The header logo may have failed before this deferred script started.
+document.querySelectorAll("img[src]").forEach((image) => {
+  if (image.complete && image.naturalWidth === 0) showImageFallback(image);
+});
+
 async function loadHerbs() {
   const response = await fetch("data/herbs.json");
   if (!response.ok) {
@@ -122,7 +153,7 @@ function showHerbDetail(){
                 <h1 id="dherb-name"></h1>
                 <p class="latin"><i lang="la" id="dherb-latin"></i></p>
                 <p id="dherb-description"></p>
-                <a href="#growing">Explore how it grows</a>
+                <a href="#growing" id="growing-link">Explore how it grows</a>
               </div>
 
               <figure class="herb-figure">
@@ -163,11 +194,23 @@ function showHerbDetail(){
 
             <section aria-labelledby="garden-heading">
               <h2 id="garden-heading">Back to the garden</h2>
-                <a href="index.html#herbs">Explore all herbs</a>.</p>
+                <p><a href="#herbs">Explore all herbs</a>.</p>
             </section>
           </article>
     `;
 }
+
+// Keep the herb route in the URL when moving to its growing section.
+detail.addEventListener("click", (event) => {
+  const link = event.target.closest("#growing-link");
+  if (!link) return;
+
+  event.preventDefault();
+  const growing = detail.querySelector("#growing");
+  growing.tabIndex = -1;
+  growing.focus({ preventScroll: true });
+  growing.scrollIntoView();
+});
 
 function renderHerb(data){
 const name = document.querySelector("#dherb-name");
@@ -207,7 +250,7 @@ const name = document.querySelector("#dherb-name");
   video.title=data.video.title;
   link.href=data.video.url;
 
-  window.scrollTo(0, 0);
+  focusContent(detail.querySelector("h1"));
 }
 
 function showError(title, message) {
@@ -215,13 +258,15 @@ function showError(title, message) {
 
   detail.innerHTML = `
     <article>
-      <h1>${title}</h1>
-      <p>${message}</p>
-      <p><a href="index.html">Back to the herb garden</a></p>
+      <h1></h1>
+      <p class="error-message"></p>
+      <p><a href="#herbs">Back to the herb garden</a></p>
     </article>
   `;
 
-  window.scrollTo(0, 0);
+  detail.querySelector("h1").textContent = title;
+  detail.querySelector(".error-message").textContent = message;
+  focusContent(detail.querySelector("h1"));
 }
 
 async function show() {
@@ -244,9 +289,7 @@ async function show() {
       return;
     }
 
-    if (id) {
-      document.querySelector(`#${id}`)?.scrollIntoView();
-    }
+    focusContent(id ? document.getElementById(id).querySelector("h2") : main.querySelector("h1"));
 
     return;
   }
@@ -273,6 +316,11 @@ async function show() {
     }
   }
 }
+
+document.querySelector(".skip-link").addEventListener("click", (event) => {
+  event.preventDefault();
+  focusContent(document.querySelector("#main-content"));
+});
 
 window.addEventListener("hashchange", show);
 
