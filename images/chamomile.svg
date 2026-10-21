@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <title>Chamomile bouquet</title>
+  <desc>A branching bunch of seven white chamomile flowers with yellow centres and fine green leaves attached to the stems.</desc>
+  <defs>
+    <ellipse id="petal" cx="0" cy="-29" rx="7" ry="22" fill="#fffdf2" />
+    <g id="flower">
+      <use href="#petal" />
+      <use href="#petal" transform="rotate(30)" />
+      <use href="#petal" transform="rotate(60)" />
+      <use href="#petal" transform="rotate(90)" />
+      <use href="#petal" transform="rotate(120)" />
+      <use href="#petal" transform="rotate(150)" />
+      <use href="#petal" transform="rotate(180)" />
+      <use href="#petal" transform="rotate(210)" />
+      <use href="#petal" transform="rotate(240)" />
+      <use href="#petal" transform="rotate(270)" />
+      <use href="#petal" transform="rotate(300)" />
+      <use href="#petal" transform="rotate(330)" />
+      <circle r="16" fill="#f6cc48" />
+    </g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#f5efd8" />
+  <ellipse cx="300" cy="363" rx="135" ry="12" fill="#69874f" opacity=".16" />
+  <g fill="none" stroke="#426b48" stroke-width="4" stroke-linecap="round">
+    <path d="M302 354 Q290 239 319 124 M302 354 Q333 208 359 65 M302 354 Q351 250 421 132 M302 354 Q369 295 409 233 M302 354 Q250 274 257 213 M302 354 Q229 298 168 229 M302 354 Q264 329 209 321" />
+  </g>
+  <g fill="none" stroke="#548645" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path transform="translate(298.73 268.9) scale(-1 1)" d="M0 0 L24 -24 M12 -12 L28 -13 M12 -12 L13 -28" />
+    <path transform="translate(320.15 266.67) scale(1 1)" d="M0 0 L24 -24 M12 -12 L28 -13 M12 -12 L13 -28" />
+    <path transform="translate(344.56 268.56) scale(1 1)" d="M0 0 L24 -24 M12 -12 L28 -13 M12 -12 L13 -28" />
+    <path transform="translate(360.1 296.67) scale(1 1)" d="M0 0 L24 -24 M12 -12 L28 -13 M12 -12 L13 -28" />
+    <path transform="translate(274.11 303.27) scale(-1 1)" d="M0 0 L24 -24 M12 -12 L28 -13 M12 -12 L13 -28" />
+    <path transform="translate(259.28 319.23) scale(-1 1)" d="M0 0 L24 -24 M12 -12 L28 -13 M12 -12 L13 -28" />
+  </g>
+  <use href="#flower" transform="translate(359 65) rotate(12) scale(.78)" />
+  <use href="#flower" transform="translate(319 124) rotate(-10) scale(.86)" />
+  <use href="#flower" transform="translate(421 132) rotate(8) scale(.94)" />
+  <use href="#flower" transform="translate(168 229) rotate(-12) scale(.85)" />
+  <use href="#flower" transform="translate(257 213) rotate(10) scale(.94)" />
+  <use href="#flower" transform="translate(409 233) rotate(-6) scale(.86)" />
+  <use href="#flower" transform="translate(209 321) rotate(9) scale(.65)" />
+</svg>

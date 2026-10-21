@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <title>Fresh spearmint</title>
+  <desc>A full bunch of spearmint with overlapping pointed green leaves and simple serrated edges.</desc>
+  <defs>
+    <g id="mint-leaf">
+      <path d="M0 0 L-15 -12 -14 -20 -25 -25 -22 -34 -30 -42 -25 -50 -28 -59 -20 -66 -21 -74 -12 -80 -10 -88 0 -102 10 -88 12 -80 21 -74 20 -66 28 -59 25 -50 30 -42 22 -34 25 -25 14 -20 15 -12Z" fill="currentColor" stroke="#426b48" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M0 -5 V-86" fill="none" stroke="#c4d8b5" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#e1f1e9"/>
+  <circle cx="475" cy="85" r="44" fill="#fbfaf5"/>
+  <ellipse cx="300" cy="360" rx="170" ry="16" fill="#3f8264" opacity=".16"/>
+  <g fill="none" stroke="#426b48" stroke-width="5" stroke-linecap="round">
+    <path d="M281 349 Q269 259 215 211 M288 349 Q298 224 313 150 M295 349 Q342 277 390 238 M286 349 Q248 303 196 282"/>
+  </g>
+  <g color="#3f8264">
+    <use href="#mint-leaf" transform="translate(309 183) rotate(4) scale(.95 1.35)"/>
+    <use href="#mint-leaf" transform="translate(302 199) rotate(-48) scale(1.1 1.3)"/>
+    <use href="#mint-leaf" transform="translate(313 200) rotate(38) scale(1.05 1.3)"/>
+    <use href="#mint-leaf" transform="translate(225 269) rotate(-76) scale(1.1 1.18)"/>
+    <use href="#mint-leaf" transform="translate(220 251) rotate(-20) scale(.95 1.25)"/>
+    <use href="#mint-leaf" transform="translate(373 283) rotate(62) scale(1.1 1.35)"/>
+    <use href="#mint-leaf" transform="translate(365 268) rotate(5) scale(.95 1.2)"/>
+  </g>
+  <g color="#548e65">
+    <use href="#mint-leaf" transform="translate(292 286) rotate(-17) scale(1.05 1.2)"/>
+    <use href="#mint-leaf" transform="translate(306 283) rotate(38) scale(1 1.1)"/>
+    <use href="#mint-leaf" transform="translate(222 265) rotate(37) scale(.9 1.05)"/>
+    <use href="#mint-leaf" transform="translate(223 269) rotate(-157) scale(.95 .85)"/>
+    <use href="#mint-leaf" transform="translate(375 278) rotate(136) scale(1 .88)"/>
+    <use href="#mint-leaf" transform="translate(298 293) rotate(-133) scale(.9 .93)"/>
+  </g>
+  <g color="#72a75d">
+    <use href="#mint-leaf" transform="translate(313 174) rotate(-22) scale(.48 .59)"/>
+    <use href="#mint-leaf" transform="translate(224 254) rotate(-8) scale(.43 .55)"/>
+    <use href="#mint-leaf" transform="translate(373 276) rotate(48) scale(.42 .52)"/>
+  </g>
+</svg>
