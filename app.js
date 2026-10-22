@@ -67,17 +67,39 @@ function elementLink(className, text, link) {
   return node;
 }
 
-function card(herb) {
+function getCurrentSeason(date = new Date()) {
+  const month = date.getMonth();
+
+  if (month === 11 || month < 2) return "winter";
+  if (month < 5) return "spring";
+  if (month < 8) return "summer";
+  return "autumn";
+}
+
+function seasonName(season) {
+  return season[0].toUpperCase() + season.slice(1);
+}
+
+function card(herb, currentSeason) {
   const item = element("li", "card", "");
+  item.dataset.seasons = herb.seasons.join(" ");
   const heading = element("h3", "name", "");
   heading.append(
     elementLink("", herb.name, `#${herb.id}`)
   );
+  const availableNow = herb.seasons.includes(currentSeason);
   item.append(
     heading,
     element("p", "latin", herb.latin),
     element("p", "use", herb.use),
-    element("p", "life", herb.life));
+    element("p", "life", herb.life),
+    element("p", "season", `Usually available: ${herb.seasons.map(seasonName).join(", ")}`),
+    element(
+      "p",
+      `season-current${availableNow ? " is-available" : ""}`,
+      availableNow ? "Available this season" : "Not usually available this season"
+    )
+  );
   return item;
 }
 
@@ -85,8 +107,31 @@ async function renderHerbList() {
   const list = document.querySelector("#herbs-list");
   const count = document.querySelector(".count");
   const herbs = await loadHerbs();
-  list.replaceChildren(...herbs.map(card));
-  count.textContent = `${herbs.length} herbs grow here.`;
+  const currentSeason = getCurrentSeason();
+  const currentSeasonFilter = document.querySelector("#current-season-filter");
+  const usualSeasonFilter = document.querySelector("#usual-season-filter");
+
+  list.replaceChildren(...herbs.map((herb) => card(herb, currentSeason)));
+  currentSeasonFilter.addEventListener("change", updateVisibleHerbs);
+  usualSeasonFilter.addEventListener("change", updateVisibleHerbs);
+
+  function updateVisibleHerbs() {
+    let visibleCount = 0;
+
+    for (const herbCard of list.children) {
+      const seasons = herbCard.dataset.seasons.split(" ");
+      const matchesCurrentSeason = !currentSeasonFilter.checked || seasons.includes(currentSeason);
+      const matchesUsualSeason = !usualSeasonFilter.value || seasons.includes(usualSeasonFilter.value);
+      herbCard.hidden = !matchesCurrentSeason || !matchesUsualSeason;
+      if (!herbCard.hidden) visibleCount += 1;
+    }
+
+    count.textContent = visibleCount
+      ? `Showing ${visibleCount} of ${herbs.length} herbs. Current season: ${seasonName(currentSeason)}.`
+      : `No herbs match these filters. Current season: ${seasonName(currentSeason)}.`;
+  }
+
+  updateVisibleHerbs();
 }
 
 function showHerbMain(){
@@ -103,7 +148,21 @@ function showHerbMain(){
 
       <section id="herbs">
         <h2>What grows here</h2>
-        <p class="count">Loading the herbs…</p>
+        <p class="count" role="status" aria-live="polite">Loading the herbs…</p>
+        <div class="season-filters">
+          <label class="current-season-filter">
+            <input id="current-season-filter" type="checkbox">
+            Available in the current season (${seasonName(getCurrentSeason())})
+          </label>
+          <label for="usual-season-filter">Usually available in</label>
+          <select id="usual-season-filter">
+            <option value="">Any season</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="autumn">Autumn</option>
+            <option value="winter">Winter</option>
+          </select>
+        </div>
         <ul id="herbs-list" class="cards"></ul>
       </section>
 
@@ -115,8 +174,9 @@ function showHerbMain(){
 
       <section id="about">
         <h2>About</h2>
-        <p>The garden is made up, and so is this site: a practice project for
-          <a href="https://github.com/olgakor-242/culs-frontend-day1">Frontend Development, day 1</a>.</p>
+        <p>The Little Herb Garden is a guide to herbs for cooking, tea and
+          pollinators. Explore each herb's growing seasons, uses and growing
+          tips to find the right plants for your garden.</p>
       </section>
     `;
 }

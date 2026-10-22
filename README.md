@@ -10,9 +10,12 @@ The Little Herb Garden is a small, responsive website about herbs for the
 kitchen, tea and pollinators. It was created as a practice project for
 **Frontend Development, day 1**.
 
-The home page presents eight herbs, with their botanical names, uses and life
-cycles. Select a herb to open its detail view. The Lavender page also includes
-growing tips, uses, extra facts loaded from JSON, and a video.
+The home page presents eight herbs, with their botanical names, uses, life
+cycles and usual seasonal availability. Filter herbs by the current season or
+by a season of your choice. The current season follows Northern Hemisphere
+meteorological seasons. Select a herb to open its detail view. The Lavender
+page also includes growing tips, uses, extra facts loaded from JSON, and a
+video.
 
 ## Run the project
 
@@ -53,6 +56,10 @@ step or project-specific package installation.
 
 Each `data/<herb>.json` file contains one JSON object describing a herb. The
 filename (without `.json`) matches that herb's `id` in `data/herbs.json`.
+
+Each herb entry in `data/herbs.json` also has a `seasons` array describing its
+usual availability. Values use Northern Hemisphere meteorological seasons
+(`spring`, `summer`, `autumn`, and `winter`) and are general estimates.
 
 | Property | Format | Description |
 | --- | --- | --- |

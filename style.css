@@ -131,6 +131,41 @@ section {
   font-size: 0.875rem;
 }
 
+.season-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.season-filters select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  font: inherit;
+}
+
+.season {
+  margin-bottom: 0.5rem;
+  color: var(--soil);
+}
+
+.season-current {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--soil);
+}
+
+.season-current.is-available {
+  color: var(--leaf);
+}
+
 .detail-page {
   max-width: 60rem;
   margin: 0 auto;
