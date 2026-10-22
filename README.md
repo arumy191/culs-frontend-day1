@@ -1,14 +1,11 @@
-## Group members/ nickname
+## Author
 
-- Zhibek Aubakirova/ zhibka
-- Olha Korotych/ olgakor-242
-- Zhuman Aruzhan/ arumy191
+- Zhuman Aruzhan
 
 # The Little Herb Garden
 
 The Little Herb Garden is a small, responsive website about herbs for the
-kitchen, tea and pollinators. It was created as a practice project for
-**Frontend Development, day 1**.
+kitchen, tea and pollinators.
 
 The home page presents eight herbs, with their botanical names, uses, life
 cycles and usual seasonal availability. Filter herbs by the current season or
